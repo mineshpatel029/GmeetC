@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #313131;
+  --foreground: #ffffff;
+  --muted: #535353;
+  --muted-foreground: #c4c4c4;
+  --accent: #ff4343;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .control-button {
+    @apply flex items-center justify-center w-12 h-12 rounded-full bg-muted text-foreground hover:bg-muted/80 transition-colors;
+  }
+
+  .end-call-button {
+    @apply flex items-center justify-center w-14 h-12 rounded-full bg-accent text-foreground hover:bg-accent/90 transition-colors;
+  }
+}
+
